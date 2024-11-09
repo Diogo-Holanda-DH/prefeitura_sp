@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+    <img src="pref_sp.png" id="prefeitura_logo"><br>
+    <img src="portal.png" id="portal_logo"><br>
+    <h1>Nova solicitação</h1>
+    <div id="form_secoes">
+       Nome Completo: <input type="text" id="cx_nome"/> <br><br>
+       
+       CPF: <input type="text" id="cx_cpf"/> <br><br>
+       
+       E-mail: <input type="text" id="cx_email"/><br><br>
+       
+       Telefone: <input type="number" id="cx_telefone"/><br><br>
+
+       Setor responsável: <select id="cx_setor">
+        <option value="">Selecione</option>
+        <option value="Finanças">Finanças</option>
+        <option value="Administração">Administração</option>
+        <option value="Infraestrutura">Infraestrutura</option>
+    </select><br><br>
+       Detalhe da Solicitação:<br> <textarea id="cx_detalhe"></textarea>
+       
+        <button id="btnprotocolo">Abrir protocolo</button>
+    </div> 
+    <script>
+        
+
+          $("#btnprotocolo").click(function(){
+            // Pegar os conteúdos digitados nas caixas de texto nos inputs
+            var nome_capturado = $("#cx_nome").val();
+            var cpf_capturado = $("#cx_cpf").val();
+            var email_capturado = $("#cx_email").val();
+            var telefone_capturado = $("#cx_telefone").val();
+            var setor_capturado = $("#cx_setor").val();
+            var detalhe_capturado = $("#cx_detalhe").val();
+            $.ajax({
+                url:"cadastrar.php",
+                method:"POST",
+                data:{nome_completo:nome_capturado,
+                cpf: cpf_capturado,
+                email: email_capturado, 
+                telefone: telefone_capturado, 
+                setor_resp: setor_capturado, 
+                detalhes: detalhe_capturado
+        
+            },
+            success: function(resposta){
+                alert(resposta);
+                
+            },
+            erro:function(){
+                alert("Não foi possível enviar!");
+            }
+          });
+        });   
+
+    </script>   
+</body>
+</html>
