@@ -11,8 +11,8 @@ $setor = $_POST['setor_resp'];
 $detalhes = $_POST['detalhes'];
 // 1º Passo - Comando SQL
 $sql = "INSERT INTO tb_protocolos
-        (nome_completo, cpf, email, telefone, setor_resp, detalhes, data_hora) VALUES
-        ('$nome', '$cpf','$email', '$telefone', '$setor', '$detalhes', '$data_hora')";
+        (nome_completo, cpf, email, telefone, setor_resp, detalhes) VALUES
+        ('$nome', '$cpf','$email', '$telefone', '$setor', '$detalhes')";
 // 2º Passo- Preparar a conexão
 $inserir = $pdo->prepare($sql);
 // 3º Passo - Tentar executar

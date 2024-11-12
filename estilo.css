@@ -19,28 +19,23 @@ body {
     text-align: center;
 }
 #btnPesquisar {
+
     width: 200px;
-    height: 50px;
+   
     font-size: 20px;
-    background-color: black;
+    background-color:rgb(29, 70, 131);
     color: white;
-    border-radius:0px 30px 30px 0px;
+    border-radius:10px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 20px;
     align-items: center;
 }
 #resultado {
     min-height: 400px;
 }
-.atualizacao {
-    width: 400px;
-    height: 200px;
-    background-color: lightgray;
-    border-left: 5px solid #ffa07a;
-    margin: auto;
-    margin-bottom: 40px;
-    text-align: left;
-    padding: 20px;
-    margin-top: 20px;
-}
+
 .tipo {
     font-size: 30px;
     font-weight: 900;
@@ -53,6 +48,16 @@ body {
     display: flex;
     flex-direction: column;
 
+}
+#pesquisando{
+    border: 1px solid rgb(165, 165, 192);
+    width: 300px;
+    height: 500px;
+    margin: auto;
+    margin-top: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 20px;
 }
 
 
