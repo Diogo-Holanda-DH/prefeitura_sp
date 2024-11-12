@@ -1,27 +1,10 @@
-#logomarcas {
-    height: 400px;
-    margin: auto;
-    margin-top: 20px;
-}
+
 body {
     text-align: center;
     font-family: Arial;   
 }
-#painelRastreio {
-    background-color: orange;
-    padding-top: 100px;
-    padding-bottom: 100px;
-}
-#codigo_procurado {
-    width: 500px;
-    height: 50px;
-    border-radius: 30px 0px 0px 30px;
-    text-align: center;
-}
 #btnPesquisar {
-
-    width: 200px;
-   
+    width: 200px;   
     font-size: 20px;
     background-color:rgb(29, 70, 131);
     color: white;
@@ -32,23 +15,7 @@ body {
     margin-top: 20px;
     align-items: center;
 }
-#resultado {
-    min-height: 400px;
-}
 
-.tipo {
-    font-size: 30px;
-    font-weight: 900;
-}
-#form_secoes {
-    background-color: aliceblue;
-    width: 400px;
-    height: 400px;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-
-}
 #pesquisando{
     border: 1px solid rgb(165, 165, 192);
     width: 300px;
